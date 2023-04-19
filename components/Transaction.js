@@ -1,10 +1,19 @@
+import { Link } from "react-router-dom"
 
 
-
-export default function Transaction() {
+export default function Transaction({ transaction, id }) {
+    
     return (
-        <div>
-            
-        </div>
+        <tr>
+            <td>
+                {transaction.date}
+            </td>
+            <td>
+                <Link to={`/transactions/${id}`}>{transaction.transaction}</Link>
+            </td>
+            <td>
+                {transaction.amount}
+            </td>
+        </tr>
     )
 }

@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import NavBar from '../components/Navbar';
 import Home from '../pages/Home';
 import Index from '../pages/Index';
 import Show from '../pages/Show';
@@ -11,7 +11,7 @@ import NotFound from '../pages/NotFound';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/transactions' element={<Index />} />

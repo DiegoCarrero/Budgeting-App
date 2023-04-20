@@ -1,12 +1,12 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import NavBar from '../components/Navbar';
-import Home from '../pages/Home';
-import Index from '../pages/Index';
-import Show from '../pages/Show';
-import New from '../pages/New';
-import Edit from '../pages/Edit';
-import NotFound from '../pages/NotFound';
+import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import Index from './pages/Index';
+import Show from './pages/Show';
+import New from './pages/New';
+import Edit from './pages/Edit';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (

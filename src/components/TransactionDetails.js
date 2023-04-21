@@ -7,7 +7,7 @@ const API = process.env.REACT_APP_API_URL;
 export default function TransactionDetails() {
 
     const [transaction, setTransaction] = useState({});
-    let navigate = useNavigate();
+    const navigate = useNavigate();
     let index = useParams();
 
     useEffect(() => {

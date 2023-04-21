@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import NavBar from './components/NavBar';
+
 import Home from './pages/Home';
 import Index from './pages/Index';
 import Show from './pages/Show';
@@ -11,7 +11,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/transactions' element={<Index />} />
@@ -25,3 +25,20 @@ function App() {
 }
 
 export default App;
+
+
+// import { Link } from "react-router-dom"
+
+
+// export default function NavBar() {
+//     return (
+//         <div className="NavBar">
+//             <Link to='/transactions'>
+//                 <h1>Budgeting App</h1>
+//             </Link>
+//             <Link to='/transactions/new'>
+//                 <button>New Transaction</button>
+//             </Link>
+//         </div>
+//     )
+// }

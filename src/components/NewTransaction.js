@@ -49,8 +49,8 @@ export default function NewTransaction() {
                 <input 
                     type="text"
                     id="transaction"
-                    name="name"
-                    placeholder="name"
+                    name="transaction"
+                    placeholder="Transaction"
                     value={transaction.transaction}
                     onChange={handleTextChange} 
                     required
@@ -72,7 +72,7 @@ export default function NewTransaction() {
                     type="text"
                     id="from"
                     name="from"
-                    placeholder="from"
+                    placeholder="From"
                     value={transaction.from}
                     onChange={handleTextChange} 
                     required

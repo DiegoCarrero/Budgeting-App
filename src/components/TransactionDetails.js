@@ -13,11 +13,13 @@ export default function TransactionDetails() {
     useEffect(() => {
         axios.get(`${API}/transactions/${index}`)
         .then((response) => setTransaction(response.data.transactions))
-        .catch((error) => navigate("/not-found"));
+        .catch((error) => navigate("/not-found"))
     }, [])
 
     function deleteTransaction() {
-
+        axios.delete(`${API}/transactions/${index}`)
+        .then(() => navigate('/transactions'))
+        .catch((c) => console.error('catch', c))
     }
 
     return (

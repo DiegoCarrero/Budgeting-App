@@ -7,11 +7,12 @@ import Show from './pages/Show';
 import New from './pages/New';
 import Edit from './pages/Edit';
 import NotFound from './pages/NotFound';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
-      {/* <NavBar /> */}
+      <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/transactions' element={<Index />} />

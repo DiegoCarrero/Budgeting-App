@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+  background-color: gold;
+  align-items: center;
+}
+
+.NavBar button {
+  margin-left: 25%;
+  background-color: silver;
+  height: 40px;
+  font-weight: bold;
+}
+
+.NavBar a {
+  text-decoration: none;
+  color: black;
+}

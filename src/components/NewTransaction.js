@@ -16,8 +16,8 @@ export default function NewTransaction() {
 
     const navigate = useNavigate();
 
-    function addTransaction(newTransaction) {
-        axios.post(`${API}/transactions`, newTransaction)
+    function addTransaction(transactionToAdd) {
+        axios.post(`${API}/transactions`, transactionToAdd)
         .then(() => navigate('/transactions'))
         .catch((error) => console.error('catch', error))
     }
@@ -32,7 +32,7 @@ export default function NewTransaction() {
     }
 
     return (
-        <div className="New-Transaction">
+        <div className="new-transaction">
             <form onSubmit={handleSubmit}>
                 <label htmlFor="date">Date:</label>
                 <input 
@@ -40,7 +40,7 @@ export default function NewTransaction() {
                     id="date" 
                     name="date"
                     placeholder="Date"
-                    value={transaction.date}
+                    value={newTransaction.date}
                     onChange={handleTextChange}
                     required
                 />
@@ -51,7 +51,7 @@ export default function NewTransaction() {
                     id="transaction"
                     name="transaction"
                     placeholder="Transaction"
-                    value={transaction.transaction}
+                    value={newTransaction.transaction}
                     onChange={handleTextChange} 
                     required
                 />
@@ -62,7 +62,7 @@ export default function NewTransaction() {
                     id="amount"
                     name="amount"
                     placeholder={0}
-                    value={transaction.amount}
+                    value={newTransaction.amount}
                     onChange={handleTextChange} 
                     required
                 />
@@ -73,7 +73,7 @@ export default function NewTransaction() {
                     id="from"
                     name="from"
                     placeholder="From"
-                    value={transaction.from}
+                    value={newTransaction.from}
                     onChange={handleTextChange} 
                     required
                 />
@@ -82,7 +82,7 @@ export default function NewTransaction() {
                 <select 
                     name="category" 
                     id="category"
-                    value={transaction.category}
+                    value={newTransaction.category}
                     onChange={handleTextChange}  
                     required
                 >

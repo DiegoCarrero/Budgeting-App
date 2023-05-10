@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Transaction from './Transaction.js';
+
 const API = process.env.REACT_APP_API_URL;
-import Transaction from './Transaction'
+
 
 export default function Transactions({ total, setTotal }) {
 
@@ -31,7 +33,7 @@ export default function Transactions({ total, setTotal }) {
                     {
                     transactions.map((transaction, id) => {
                         currentTotal += transaction.amount;
-                        return <Transaction key={index} transaction={transaction} id={id} />;
+                        return <Transaction key={id} transaction={transaction} id={id} />;
                     })
                     }
                 </tbody>

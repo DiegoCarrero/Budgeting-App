@@ -18,7 +18,7 @@ export default function Transactions({ total, setTotal }) {
     useEffect(() => setTotal(currentTotal));
 
     return (
-        <div className="Transactions">
+        <div className="transactions">
             <table>
                 <thead>
                     <tr>

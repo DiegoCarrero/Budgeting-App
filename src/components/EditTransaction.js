@@ -39,7 +39,7 @@ export default function EditTransaction() {
     }
 
     return (
-        <div className="Edit-Transaction">
+        <div className="edit-transaction">
             <form onSubmit={handleSubmit}>
                 <label htmlFor="date">Date:</label>
                 <input 

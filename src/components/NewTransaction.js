@@ -7,7 +7,7 @@ const API = process.env.REACT_APP_API_URL;
 export default function NewTransaction() {
 
     const [newTransaction, setNewTransaction] = useState({
-        itemName: "",
+        transaction: "",
         amount: 0,
         date: "",
         from: "",

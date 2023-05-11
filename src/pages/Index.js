@@ -18,7 +18,7 @@ export default function Index() {
 
     return (
         <div className="Index">
-            <h2>Bank Account: <span style={totalColor()}>{total}</span></h2>
+            <h2>Bank Account: <span style={totalColor()}>${total}</span></h2>
             <Transactions total={total} setTotal={setTotal} />
         </div>
     )

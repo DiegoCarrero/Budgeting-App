@@ -7,7 +7,7 @@ const API = process.env.REACT_APP_API_URL;
 export default function EditTransaction() {
 
     const [transaction, setTransaction] = useState({
-        itemName: "",
+        transaction: "",
         amount: 0,
         date: "",
         from: "",
@@ -28,7 +28,7 @@ export default function EditTransaction() {
 
     useEffect(() => {
         axios.get(`${API}/transactions/${id}`)
-        .then((response) => setTransaction(response.data.transactions))
+        .then((response) => setTransaction(response.data))
         .catch((error) => console.error('catch', error))
     }, [id])
 

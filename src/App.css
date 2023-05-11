@@ -80,6 +80,10 @@
   border: 1px solid black;
 }
 
+.amounts {
+  font-weight: bold;
+}
+
 .edit-transaction {
   display: flex;
   flex-direction: column;

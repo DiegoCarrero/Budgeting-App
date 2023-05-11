@@ -46,7 +46,7 @@
 }
 
 .NavBar button {
-  margin-left: 25%;
+  margin-left: 800px;
   background-color: silver;
   height: 40px;
   font-weight: bold;
@@ -55,22 +55,25 @@
 .NavBar a {
   text-decoration: none;
   color: black;
+  margin-left: 70px;
 }
 
 .transactions {
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
-.transactions table, tr, th {
+.transactions table {
   border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
 }
 
-.transaction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.transaction a {
+  color: black;
 }
 
 .transaction tr, td {

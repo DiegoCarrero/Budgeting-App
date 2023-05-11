@@ -13,7 +13,9 @@ export default function Transactions({ total, setTotal }) {
     // fetches all transactions from backend
     useEffect(() => {
         axios.get(`${API}/transactions`)
-        .then(response => setTransactions(response.data.transactions))
+        .then((response) => {
+            setTransactions(response.data)
+        })
         .catch((error) => console.error('catch', error))
     }, []);
 

@@ -34,6 +34,8 @@ export default function Transactions({ total, setTotal }) {
                 <tbody>
                     {
                     transactions.map((transaction, id) => {
+                        transaction.transaction !== 'Income' ? 
+                        currentTotal -= transaction.amount :
                         currentTotal += transaction.amount;
                         return <Transaction key={id} transaction={transaction} id={id} />;
                     })

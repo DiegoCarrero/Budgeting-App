@@ -11,7 +11,7 @@ export default function Transaction({ transaction, id }) {
             <td>
                 <Link to={`/transactions/${id}`}>{transaction.transaction}</Link>
             </td>
-            <td>
+            <td style={transaction.transaction === 'Income' ? { color: "green" } : { color: "red" }}>
                 {transaction.amount}
             </td>
         </tr>

@@ -10,7 +10,6 @@ export default function Transactions({ total, setTotal }) {
     const [transactions, setTransactions] = useState([]);
     let currentTotal = 0;
 
-    // fetches all transactions from backend
     useEffect(() => {
         axios.get(`${API}/transactions`)
         .then((response) => {
@@ -34,9 +33,9 @@ export default function Transactions({ total, setTotal }) {
                 <tbody>
                     {
                     transactions.map((transaction) => {
-                        transaction.transaction !== 'Income' ? 
-                        currentTotal -= transaction.amount :
-                        currentTotal += transaction.amount;
+                        transaction.category === 'Income' ? 
+                        currentTotal += parseInt(transaction.amount) :
+                        currentTotal -= parseInt(transaction.amount)
                         return <Transaction key={transaction.id} transaction={transaction} />;
                     })
                     }

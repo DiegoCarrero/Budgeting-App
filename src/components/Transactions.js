@@ -33,11 +33,11 @@ export default function Transactions({ total, setTotal }) {
                 </thead>
                 <tbody>
                     {
-                    transactions.map((transaction, id) => {
+                    transactions.map((transaction) => {
                         transaction.transaction !== 'Income' ? 
                         currentTotal -= transaction.amount :
                         currentTotal += transaction.amount;
-                        return <Transaction key={id} transaction={transaction} id={id} />;
+                        return <Transaction key={transaction.id} transaction={transaction} />;
                     })
                     }
                 </tbody>

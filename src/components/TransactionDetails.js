@@ -8,16 +8,16 @@ export default function TransactionDetails() {
 
     const [transaction, setTransaction] = useState({});
     const navigate = useNavigate();
-    let index = useParams();
+    let { id } = useParams();
 
     useEffect(() => {
-        axios.get(`${API}/transactions/${index}`)
-        .then((response) => setTransaction(response.data.transactions))
+        axios.get(`${API}/transactions/${id}`)
+        .then((response) => setTransaction(response.data))
         .catch((error) => navigate("/not-found"))
     }, [])
 
     function deleteTransaction() {
-        axios.delete(`${API}/transactions/${index}`)
+        axios.delete(`${API}/transactions/${id}`)
         .then(() => navigate('/transactions'))
         .catch((c) => console.error('catch', c))
     }
@@ -32,7 +32,7 @@ export default function TransactionDetails() {
                 <p>Category: {transaction.category}</p>
             </article>
 
-            <Link to={`/transactions/${index}/edit`}>
+            <Link to={`/transactions/${id}/edit`}>
                 <button>Edit</button>
             </Link>
 

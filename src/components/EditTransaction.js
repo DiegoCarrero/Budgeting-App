@@ -15,7 +15,7 @@ export default function EditTransaction() {
     });
 
     const navigate = useNavigate();
-    let index = useParams();
+    let { id } = useParams();
         
     function handleTextChange(event) {
         setTransaction({...transaction, [event.target.id]: event.target.value});
@@ -27,14 +27,14 @@ export default function EditTransaction() {
     }
 
     useEffect(() => {
-        axios.get(`${API}/transactions/${index}`)
+        axios.get(`${API}/transactions/${id}`)
         .then((response) => setTransaction(response.data.transactions))
         .catch((error) => console.error('catch', error))
-    }, [index])
+    }, [id])
 
     function editTransaction() {
-        axios.put(`${API}/transactions/${index}`, transaction)
-        .then(navigate(`/transactions/${index}`))
+        axios.put(`${API}/transactions/${id}`, transaction)
+        .then(navigate(`/transactions/${id}`))
         .catch((error) => console.error('catch', error))
     }
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 
-export default function Transaction({ transaction, id }) {
+export default function Transaction({ transaction }) {
     
     return (
         <tr className="transaction">
@@ -9,7 +9,7 @@ export default function Transaction({ transaction, id }) {
                 {transaction.date}
             </td>
             <td>
-                <Link to={`/transactions/${id}`}>{transaction.transaction}</Link>
+                <Link to={`/transactions/${transaction.id}`}>{transaction.transaction}</Link>
             </td>
             <td style={transaction.transaction === 'Income' ? { color: "green" } : { color: "red" }}>
                 {transaction.amount}

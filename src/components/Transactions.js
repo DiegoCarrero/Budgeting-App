@@ -32,11 +32,12 @@ export default function Transactions({ total, setTotal }) {
                 </thead>
                 <tbody>
                     {
-                    transactions.map((transaction) => {
+                    transactions.map((transaction, id) => {
                         transaction.category === 'Income' ? 
                         currentTotal += parseInt(transaction.amount) :
                         currentTotal -= parseInt(transaction.amount)
-                        return <Transaction key={transaction.id} transaction={transaction} />;
+                        transaction.id = id
+                        return <Transaction key={id} transaction={transaction} />;
                     })
                     }
                 </tbody>

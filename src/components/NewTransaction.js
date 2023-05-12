@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 const API = process.env.REACT_APP_API_URL;
@@ -97,6 +97,8 @@ export default function NewTransaction() {
                     <option value='Miscellaneous'>Miscellaneous</option>
                 </select>
 
+                <button><Link to="/transactions">Cancel</Link></button>
+                <br/>
                 <button type="submit">Add New Transaction</button>
             </form>
         </div>

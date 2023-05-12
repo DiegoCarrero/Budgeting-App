@@ -34,16 +34,6 @@ export default function NewTransaction() {
     return (
         <div className="new-transaction">
             <form onSubmit={handleSubmit}>
-                <label htmlFor="date">Date:</label>
-                <input 
-                    type="text" 
-                    id="date" 
-                    name="date"
-                    placeholder="Date"
-                    value={newTransaction.date}
-                    onChange={handleTextChange}
-                    required
-                />
 
                 <label htmlFor="transaction">Transaction:</label>
                 <input 
@@ -53,6 +43,17 @@ export default function NewTransaction() {
                     placeholder="Transaction"
                     value={newTransaction.transaction}
                     onChange={handleTextChange} 
+                    required
+                />
+
+                <label htmlFor="date">Date:</label>
+                <input 
+                    type="text" 
+                    id="date" 
+                    name="date"
+                    placeholder="mm/dd/yyyy"
+                    value={newTransaction.date}
+                    onChange={handleTextChange}
                     required
                 />
 

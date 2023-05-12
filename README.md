@@ -1,5 +1,7 @@
 # Budgeting App
 
+### [Trello Board](https://trello.com/invite/b/T6GxoiJu/ATTIeb176246c6c2a885e09313ca63d45587D1B768D4/budgeting-app)
+
 ### [Back-end on Github](https://github.com/DiegoCarrero/Budgeting-App-Backend)
 
 ## How to Use
